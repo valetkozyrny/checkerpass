@@ -1,3 +1,26 @@
+<?php
+include "ValidatorRegistr.php";
+$validate = "";
+if ( $_SERVER['REQUEST_METHOD'] == 'POST') {
+    $validate = new Validate($_POST);
+
+    $validate->required('email');
+    $validate->email('email');
+    $validate->emailminlenght('email', 4);
+    $validate->comparepasswords('password', 'passwordtwo');
+    $validate->required('password');
+    $validate->required('passwordtwo');
+
+
+
+
+}
+
+
+
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +32,7 @@
     <link rel="stylesheet" href="registration.css">
 </head>
 <body>
-<form name="formocka" id="formocka" method="post" novalidate>
+<form name="formocka" id="formocka" action="registrationhtml.php" method="post" novalidate>
     <label for="email"> Email: </label>
     <input type="email" minlength="3" maxlength="25" name="email" id="email">
 
@@ -25,6 +48,19 @@
 
     <label for="submit">  </label>
     <input name="submit" type="submit">
+
+    <ul>
+        <?php
+        if ($validate) {
+            if ($validate->hasErrors()) {
+                $errors = $validate->getErrors();
+                foreach ($errors as $error){
+                    echo "<li>$error</li>";
+                }
+            }
+            }
+        ?>
+    </ul>
 </form>
 </body>
 </html>
