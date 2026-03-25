@@ -22,11 +22,11 @@ input.addEventListener('input', function () {
                 p.textContent = "Your password is very weak";
                 fillbar.style.width = "25%";
                 fillbar.style.backgroundColor = "red";
-            } else if (credits >= 10 && credits < 15) {
+            } else if (credits >= 10 && credits < 20) {
                 p.textContent = "Your password is medium";
                 fillbar.style.width = "60%";
                 fillbar.style.backgroundColor = "orange";
-            } else if (credits >= 15) {
+            } else if (credits >= 20) {
                 p.textContent = "Your password is very strong!";
                 fillbar.style.width = "100%";
                 fillbar.style.backgroundColor = "green";

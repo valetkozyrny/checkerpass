@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.page {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #6b7280;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.about {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.about p {
+    margin-bottom: 18px;
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.info-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.info-card p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subtitle {
+        margin: 0 auto;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .page {
+        width: 94%;
+        padding: 25px 0;
+    }
+
+    .hero,
+    .about,
+    .info-card {
+        padding: 24px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+}
+.try-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 26px;
+    background: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.try-btn:hover {
+    background: #000000;
+    transform: translateY(-2px);
+}

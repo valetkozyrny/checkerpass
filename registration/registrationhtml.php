@@ -30,6 +30,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="../includes/footer.css">
 </head>
 <body>
 <form name="formocka" id="formocka" action="registrationhtml.php" method="post" novalidate>
@@ -62,5 +63,9 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST') {
         ?>
     </ul>
 </form>
+<?php
+include "../includes/footer.php";
+?>
 </body>
+
 </html>
